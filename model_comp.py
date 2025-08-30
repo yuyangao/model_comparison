@@ -54,7 +54,7 @@ for model in models:
             u_t = (U_ts[i]).squeeze()
             
             data = preprocess(actions, rewards, resp, u_t)
-            print("Finished preprocessing")  # 检查preprocess的完成情况
+            print("Finished preprocessing")  
 
             res = fit_parallel(pool=pool, data=data,
                                 agent = now_agent, p_name=p_name,
